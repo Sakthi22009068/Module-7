@@ -16,8 +16,31 @@ To write a Python program to calculate the **sum of all digits** in a number usi
 
 ## 💻 PROGRAM:
 
-ADD CODE HERE
+def sum_digit(n):
+
+    if n <= 0:    # Base case
+        return 0
+    else:
+    
+        return (n % 10) + sum_digit(n // 10)  # Recursive case
+
+
+num = int(input("Enter a number: "))
+
+
+result = sum_digit(num)
+
+print(f"Sum of digits of {num} is {result}")
+
 
 ## OUTPUT
+Enter a number: 1234
+
+Sum of digits of 1234 is 10
+
+Enter a number: 56789
+
+Sum of digits of 56789 is 35
 
 ## RESULT
+The program successfully computes the sum of digits of a number using recursion, breaking down the number digit by digit until all digits are added.
