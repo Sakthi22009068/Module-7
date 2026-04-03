@@ -17,8 +17,39 @@ To write a Python program to demonstrate **Head Recursion** by finding and print
 
 ## 💻 PROGRAM:
 
-ADD CODE HERE
+
+def fun(n):
+
+    if n <= 0:
+    
+        return
+        
+    fun(n-2)  # Recursive call at the beginning (head recursion)
+    
+    print(n)  # Print after recursion
+
+num = int(input("Enter a number: "))
+
+
+if num % 2 != 0:
+
+    num += 1
+
+
+fun(num)
+
 
 ## OUTPUT
+Enter a number: 7
+
+2
+
+4
+
+6
+
+8
 
 ## RESULT
+
+The program successfully demonstrates Head Recursion, where the recursive call is made before any processing, and values are printed after the recursion unfolds.
